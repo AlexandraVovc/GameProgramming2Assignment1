@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WinScreen : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject player;
+    Vector3 playerPosition;
     void Start()
     {
-        
+        playerPosition = player.transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnTriggerEnter(Collider collision)
     {
-        
+        if (collision.gameObject.tag == "Player")
+        {
+            SceneManager.LoadScene("WinScreen");
+        }
+
     }
 }

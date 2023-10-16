@@ -222,7 +222,7 @@ Transform:
   m_GameObject: {fileID: 14511355}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 360.8, y: 88.759995, z: 9.5}
+  m_LocalPosition: {x: 360.8, y: 88.95, z: 9.5}
   m_LocalScale: {x: 26.793308, y: 0.39912, z: 25.656347}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -593,6 +593,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1960851614658320528, guid: f1107a0593e55a94aba2e7738d65b180, type: 3}
+      propertyPath: characterMovement
+      value: 
+      objectReference: {fileID: 1898049445}
+    - target: {fileID: -1960851614658320528, guid: f1107a0593e55a94aba2e7738d65b180, type: 3}
+      propertyPath: particleSystemPrefab
+      value: 
+      objectReference: {fileID: 557716063254408440, guid: 2ec82bef3ebbb2c4398a5b9d23c0b85f, type: 3}
     - target: {fileID: 2070130831665119094, guid: f1107a0593e55a94aba2e7738d65b180, type: 3}
       propertyPath: m_Name
       value: PowerUp
@@ -645,7 +653,8 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -1960851614658320528, guid: f1107a0593e55a94aba2e7738d65b180, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7393143588154260092, guid: f1107a0593e55a94aba2e7738d65b180, type: 3}
@@ -2552,11 +2561,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1277931591
@@ -2907,7 +2916,7 @@ Transform:
   m_GameObject: {fileID: 1354560273}
   serializedVersion: 2
   m_LocalRotation: {x: -0.015014428, y: -0.6995663, z: -0.002770347, w: 0.7144046}
-  m_LocalPosition: {x: 375.7, y: 94.29, z: 7.96}
+  m_LocalPosition: {x: 375.7, y: 94.42, z: 7.96}
   m_LocalScale: {x: 1.6045463, y: 0.3929927, z: 2.328957}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3796,7 +3805,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8887519090408508974, guid: d3aa5982d1b90a043a9dba9b200d5f6e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 88.96
+      value: 89.21
       objectReference: {fileID: 0}
     - target: {fileID: 8887519090408508974, guid: d3aa5982d1b90a043a9dba9b200d5f6e, type: 3}
       propertyPath: m_LocalPosition.z

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class CharacterMovement : MonoBehaviour
     private float jumpHeight = 1f;
     public bool canDoubleJump = false;
 
+    public static int buildIndex;
+
     private CharacterController controller;
     private Animator animator;
     private void Start()
@@ -27,6 +30,7 @@ public class CharacterMovement : MonoBehaviour
     public void Update()
     {
         ProcessMovement();
+        FallOffPlane();
     }
     public void LateUpdate()
     {       
@@ -110,6 +114,25 @@ public class CharacterMovement : MonoBehaviour
         else
         {
             return walkSpeed;
+        }
+    }
+
+    void FallOffPlane()
+    {
+        if (gameObject.transform.position.y <= -30)
+        {
+            switch (buildIndex)
+            {
+                case 2:
+                    SceneManager.LoadScene("Level 1");
+                    break;
+                case 3:
+                    SceneManager.LoadScene("Level 2");
+                    break;
+                default:
+                    SceneManager.LoadScene("Level 3");
+                    break;
+            }
         }
     }
 }

@@ -10,6 +10,8 @@ public class GoToLevel3 : MonoBehaviour
     void Start()
     {
         playerPosition = player.transform.position;
+
+        CharacterMovement.buildIndex = 3;
     }
 
     public void OnTriggerEnter(Collider collision)
